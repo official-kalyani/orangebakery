@@ -1,0 +1,1 @@
+Hy, {{@$fullname}} Your Otp is {{@$otp}}

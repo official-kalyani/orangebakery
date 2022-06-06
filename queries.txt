@@ -1,0 +1,9 @@
+ALTER TABLE `categories` ADD `is_normal` ENUM('yes','no') NOT NULL DEFAULT 'yes' AFTER `meta_desc`;
+
+ALTER TABLE `users` ADD `last_used_platform` ENUM('ANDROID','WEB') NULL DEFAULT NULL AFTER `has_verified`;
+
+ALTER TABLE `products` ADD `steps_completed` TINYINT(3) NULL DEFAULT NULL AFTER `is_photocake`;
+
+ALTER TABLE `obcoins` ADD `deliveryCharge` INT(100) NOT NULL AFTER `paisa`;
+UPDATE `obcoins` SET `deliveryCharge` = '100' WHERE `obcoins`.`id` = 1;
+
